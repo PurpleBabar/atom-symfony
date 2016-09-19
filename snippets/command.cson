@@ -1,0 +1,69 @@
+'.source.php':
+# Command Snippet
+    'Backbone ContainerAwareCommand':
+        'prefix': 'sfcommand'
+        'description': 'Backbone to create a ContainerAwareCommand'
+        'body': """
+// src/${1:My}Bundle/Command/${2:MySuper}Command.php
+namespace ${1:My}Bundle\Command;
+
+use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
+use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\Console\Output\OutputInterface;
+
+class ${2:MySuper}Command extends ContainerAwareCommand
+{
+    protected function configure()
+    {
+        $this
+            ->setName('${3:mybundle:mysupercommand}')
+            ->setDescription('${4:Greatest Command on earth}')
+        ;
+    }
+
+    protected function execute(InputInterface $input, OutputInterface $output)
+    {
+        ${5:// Logic}
+    }
+}
+"""
+# Add Argument Snippet
+    'addArgument':
+        'prefix': 'sfcommandAddA'
+        'description': 'Add Argument in configuration'
+        'body': """
+->addArgument(
+    '${1:argumentName}',
+    InputArgument::OPTIONAL,
+    '${2:Question ?}'
+)
+"""
+# Add Option Snippet
+    'addOption':
+        'prefix': 'sfcommandAddO'
+        'description': 'Add Option in configuration'
+        'body': """
+->addOption(
+    '${1:optionName}',
+    null,
+    InputOption::VALUE_NONE,
+    '${2:Description for option}'
+)
+"""
+# Get Argument Snippet
+    'getArgument ':
+        'prefix': 'sfcommandGetA'
+        'description': 'Get Argument in execute'
+        'body': """$${1:name} = $input->getArgument('${1:name}');${2}"""
+# Get Option Snippet
+    'getOption':
+        'prefix': 'sfcommandGetO'
+        'description': 'Get Option in execute'
+        'body': """$${1:name} = $input->getOption('${1:name}');${2}"""
+# Output Command Snippet
+    'Output Command':
+        'prefix': 'sfcommandO'
+        'description': 'Output line in execute'
+        'body': """$output->writeln(${1});"""

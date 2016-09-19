@@ -1,0 +1,34 @@
+'.source.php':
+    # Constraint Validator
+    'Constraint Validator':
+        'prefix': 'sfconstraintvalidator'
+        'description': 'Backbone to create a Constraint Validator'
+        'body': """
+use Symfony\Component\Validator\Constraint;
+use Symfony\Component\Validator\ConstraintValidator;
+
+class ${1:Constraint}Validator extends ConstraintValidator
+{
+    public function validate($value, Constraint $constraint)
+    {
+        if (${2:constraint}) {
+            $this->context->buildViolation($constraint->message)
+                ->setParameter('%string%', $value)
+                ->addViolation();
+        }
+    }
+}
+"""
+
+    # Constraint Validator
+    'Constraint Validator':
+        'prefix': 'sfconstraint'
+        'description': 'Backbone to create a Constraint Validator'
+        'body': """
+use Symfony\Component\Validator\Constraint;
+
+class ${1:Name}Constraint extends Constraint
+{
+    public $message = ${2:Message containing the value "%string%"}';
+}
+"""

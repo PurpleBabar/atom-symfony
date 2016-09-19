@@ -1,0 +1,78 @@
+'.source.php':
+# Dump vars
+    'Dumping variables':
+        'prefix': 'sfdump'
+        'description': 'Dumping entities made easy'
+        'body': """
+\Doctrine\Common\Util\Debug::dump(${1});
+"""
+    'Creating Action':
+        'prefix': 'sfaction'
+        'body': """
+public function ${1:index}Action(${2})
+{
+    return \$this->render('${3}.html.twig');
+}
+"""
+# Creating Controller
+    'Creating Controller':
+        'prefix': 'sfcontroller'
+        'description': 'Backbone to create a Controller'
+        'body': """
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
+class ${1:Default}Controller extends Controller
+{
+    public function ${2:index}Action(${3})
+    {
+        return \$this->render('${4}.html.twig');
+    }
+}
+"""
+# Get Entity manager
+    'Entity manager':
+        'prefix': 'sfem'
+        'description': 'Getting entitiy manager'
+        'body': """$em = \$this->getDoctrine()->getManager();"""
+
+# Forward to another action
+    'Forwarding':
+        'prefix': 'sfforward'
+        'description': 'Forwarding to another action'
+        'body': """$this->forward('${1:Bundle:Controller:action}', array(${3}));"""
+
+# Redirect to another route
+    'Redirecting':
+        'prefix': 'sfredirect'
+        'description': 'Redirecting to another route'
+        'body': """$this->redirectToRoute('${1}');"""
+
+# Render Template
+    'Rendering template':
+        'prefix': 'sfrender'
+        'description': 'Rendering Template'
+        'body': """$this->render('${1:Bundle:Folder:template}.html.twig'${2:, array(${3})});"""
+
+# Get Repository
+    'Repository':
+        'prefix': 'sfrepo'
+        'description': 'Get Repository'
+        'body': """$em->getRepository('${1:Bundle:Repository}');"""
+
+# Get Request
+    'Request':
+        'prefix': 'sfrequest'
+        'description': 'Get Request'
+        'body': """$request = $this->getRequest();"""
+
+# Get Session
+    'Session':
+        'prefix': 'sfsession'
+        'description': 'Get Session'
+        'body': """$this->getRequest()->getSession();"""
+
+# Set Flash
+    'Flash':
+        'prefix': 'sfflash'
+        'description': 'Set Flash'
+        'body': """$this->get('session')->getFlashBag()->add('${1:type}', '${2:message}');"""

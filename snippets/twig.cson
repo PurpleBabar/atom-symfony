@@ -1,0 +1,69 @@
+'.source.php':
+    # Twig Extension
+    'Twig Extension':
+        'prefix': 'sftwigextension'
+        'description': 'Backbone to create a Twig Extension'
+        'body': """
+class ${1:Name}Extension extends \Twig_Extension
+{
+    ${3}
+
+    public function getName()
+    {
+        return '{2:name}';
+    }
+}
+"""
+
+    # Add Filters to Twig Extension
+    'Add Filters to Twig Extension':
+        'prefix': 'sftwigaddfilters'
+        'description': 'Adding filters to a twig extension'
+        'body': """
+public function getFilters()
+{
+    return array(
+        new \Twig_SimpleFilter('${1:filter}', array($this, '${1}Filter')),
+    );
+}
+"""
+
+    # Add Functions to Twig Extension
+    'Add Functions to Twig Extension':
+        'prefix': 'sftwigaddfunctions'
+        'description': 'Adding functions to a twig extension'
+        'body': """
+public function getFunctions()
+{
+    return array(
+        new \Twig_SimpleFunction('${1:function}', array($this, '${1}Function')),
+    );
+}
+"""
+
+    # Add Tests to Twig Extension
+    'Add Tests to Twig Extension':
+        'prefix': 'sftwigaddtests'
+        'description': 'Adding tests to a twig extension'
+        'body': """
+ public function getTests()
+    {
+        return array(
+            '${1:test}' => new \Twig_Test_Function('${2:test_name}'),
+        );
+    }
+"""
+
+
+    # Add Globals to Twig Extension
+    'Add Globals to Twig Extension':
+        'prefix': 'sftwigaddglobals'
+        'description': 'Adding globals to a twig extension'
+        'body': """
+public function getGlobals()
+    {
+        return array(
+            '${1}' => new Text(),
+        );
+    }
+"""

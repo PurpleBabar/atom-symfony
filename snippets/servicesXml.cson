@@ -1,0 +1,10 @@
+'.text.xml':
+    # Service xml
+    'Service Xml':
+        'prefix': 'sfservice'
+        'description': 'Backbone to declare a service in xml'
+        'body': """
+<service id="${1:serviceId}" class="${2:serviceClass}">
+    <argument>${3:argument}</argument>
+</service>
+"""

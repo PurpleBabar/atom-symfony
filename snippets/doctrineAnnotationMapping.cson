@@ -1,0 +1,90 @@
+'.source.php':
+    # Simple field annotation
+    'Simple field annotation':
+        'prefix': 'sfdoctrinefield'
+        'description': 'Simple field annotation'
+        'body': """
+/**
+ * @ORM\Column(name="${1}", type="${2}"${3})
+ */
+"""
+
+    # Id field annotation
+    'Id field annotation':
+        'prefix': 'sfdoctrineid'
+        'description': 'Id field annotation'
+        'body': """
+/**
+ * @ORM\Column(name="id", type="integer", nullable=false)
+ * @ORM\Id()
+ * @ORM\GeneratedValue(strategy="IDENTITY")
+ */
+"""
+
+    # ManyToOne mapping
+    'ManyToOne mapping':
+        'prefix': 'sfdoctrinemanytoone'
+        'description': 'ManyToOne mapping'
+        'body': """
+/**
+ * @ORM\ManyToOne(targetEntity="${1}")
+ * @ORM\JoinColumn(name="${2}", referencedColumnName="id"${3})
+ */
+ """
+
+    # OneToMany mapping
+    'OneToMany mapping':
+        'prefix': 'sfdoctrineonetomany'
+        'description': 'OneToMany Mapping'
+        'body': """
+/**
+ * @ORM\OneToMany(targetEntity="${1}", mappedBy="${2}"${3})
+ */
+"""
+
+    # OneToOne mapping
+    'OneToOne mapping':
+        'prefix': 'sfdoctrineonetoone'
+        'description': 'OneToOne Mapping'
+        'body': """
+/**
+ * @OneToOne(targetEntity="${1}")
+ * @JoinColumn(name="${2}", referencedColumnName="id")
+ */
+"""
+
+
+    # ManyToMany Owner mapping
+    'ManyToMany Owner mapping':
+        'prefix': 'sfdoctrinemanytomanyo'
+        'description': 'ManyToMany Owner Mapping'
+        'body': """
+/**
+ * @ManyToMany(targetEntity="${1}", inversedBy="${2}")
+ * @JoinTable(name="${3}",
+ *      joinColumns={@JoinColumn(name="${4}", referencedColumnName="id")},
+ *      inverseJoinColumns={@JoinColumn(name="${5}", referencedColumnName="id")}
+ *      )
+ */
+"""
+
+    # ManyToMany Inverse mapping
+    'ManyToMany Inverse mapping':
+        'prefix': 'sfdoctrinemanytomanyi'
+        'description': 'ManyToMany Inverse Mapping'
+        'body': """
+/**
+ * @ManyToMany(targetEntity="${1}", mappedBy="${2}")
+ */
+"""
+
+    # Entity mapping
+    'Entity mapping':
+        'prefix': 'sfdoctrineentity'
+        'description': 'Entity Mapping'
+        'body': """
+/**
+ * @ORM\Entity()
+ * @ORM\Table(name="${1:name}")
+ */
+"""

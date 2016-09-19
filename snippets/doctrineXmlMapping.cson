@@ -1,0 +1,88 @@
+'.text.xml':
+    # Simple field mapping
+    'Simple field mapping':
+        'prefix': 'sfdoctrinefield'
+        'description': 'Simple field mapping'
+        'body': """
+<field name="${1}" column="${2}" type="${3}" />
+"""
+
+    # id field mapping
+    'id field mapping':
+        'prefix': 'sfdoctrineid'
+        'description': 'id field mapping'
+        'body': """
+<id name="id" type="integer" column="id">
+    <generator strategy="AUTO"/>
+</id>
+"""
+
+    # ManyToOne mapping
+    'ManyToOne mapping':
+        'prefix': 'sfdoctrinemanytoone'
+        'description': 'ManyToOne mapping'
+        'body': """
+<many-to-one field="${1}" target-entity="${2}">
+    <join-column name="${3}" referenced-column-name="id" />
+</many-to-one>
+ """
+
+
+    # OneToMany mapping
+    'OneToMany mapping':
+        'prefix': 'sfdoctrineonetomany'
+        'description': 'OneToMany Mapping'
+        'body': """
+<one-to-many field="${1}" target-entity="${2}" mapped-by="${3}">
+    <cascade>
+        <cascade-persist/>
+    </cascade>
+    <order-by>
+        <order-by-field name="${4}" direction="ASC" />
+    </order-by>
+</one-to-many>
+"""
+
+    # OneToOne mapping
+    'OneToOne mapping':
+        'prefix': 'sfdoctrineonetoone'
+        'description': 'OneToOne Mapping'
+        'body': """
+<one-to-one field="${1}" target-entity="${2}" inversed-by="${3}">
+    <cascade>
+        <cascade-remove />
+    </cascade>
+    <join-column name="${4}" referenced-column-name="id" on-delete="CASCADE" on-update="CASCADE"/>
+</one-to-one>
+"""
+
+
+    # ManyToMany mapping
+    'ManyToMany mapping':
+        'prefix': 'sfdoctrinemanytomany'
+        'description': 'ManyToMany Mapping'
+        'body': """
+<many-to-many field="${1}" target-entity="${2}">
+    <cascade>
+        <cascade-all/>
+    </cascade>
+    <join-table name="${3}">
+        <join-columns>
+            <join-column name="${4}" referenced-column-name="id" nullable="false" unique="false" />
+        </join-columns>
+        <inverse-join-columns>
+            <join-column name="${5}" referenced-column-name="id" column-definition="INT NULL" />
+        </inverse-join-columns>
+    </join-table>
+</many-to-many>
+"""
+
+    # Entity mapping
+    'Entity mapping':
+        'prefix': 'sfdoctrineentity'
+        'description': 'Entity Mapping'
+        'body': """
+<entity name="${1}" table="${2}" schema="${3}" repository-class="${4}">
+    ${5}
+</entity>
+"""

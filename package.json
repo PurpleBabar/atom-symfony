@@ -1,0 +1,19 @@
+{
+  "name": "atom-symfony",
+  "main": "./lib/atom-symfony",
+  "version": "0.1.0",
+  "description": "A collection of Symfony2 snippets",
+  "keywords": [
+    "snippets",
+    "symfony2",
+    "autocomplete",
+    "php"
+  ],
+  "repository": "https://github.com/PurpleBabar/atom-symfony",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

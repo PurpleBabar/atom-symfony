@@ -1,0 +1,50 @@
+'.text.html.twig':
+    # Symfony Form
+    'Form':
+        'prefix': 'sfform'
+        'body': """
+<form class="form" action="{{ path('') }}" method="POST" {{ form_enctype(form) }}>
+    {{ form_errors(form) }}
+    {{ form_widget(form) }}
+    <input type="submit" value="Submit" />
+</form>
+"""
+
+    # Symfony Form Row
+    'Form Row':
+        'prefix': 'sfformrow'
+        'body': """
+{{ form_row(${1}) }}
+"""
+
+    # Twig Trans Tag
+    'Twig Trans Tag':
+        'prefix': 'trans'
+        'body': """
+{% trans %}${1}{% endtrans %}
+"""
+
+    # Twig Asset
+    'Twig asset':
+        'prefix': 'asset'
+        'body': """
+{{ asset('bundles/${1}')}}
+"""
+
+    # Assetic Stylesheets
+    'Assetic Stylesheets':
+        'prefix': 'asseticcss'
+        'body': """
+{% stylesheets 'bundles/${1}/css/*' filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+"""
+
+    # Assetic Javascript
+    'Assetic Javascript':
+        'prefix': 'asseticjs'
+        'body': """
+{% javascripts '@${1}/Resources/public/js/*' %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %}
+"""

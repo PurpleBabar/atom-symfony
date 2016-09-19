@@ -1,0 +1,10 @@
+'.source.yaml':
+    # Service yml
+    'Service Yml':
+        'prefix': 'sfservice'
+        'description': 'Backbone to declare a service in yml'
+        'body': """
+${1:serviceId}:
+    class:     ${2:serviceClass}
+    arguments: [${3:argument}]
+"""
