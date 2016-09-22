@@ -1,11 +1,5 @@
 '.source.php':
-# Dump vars
-    'Dumping variables':
-        'prefix': 'sfdump'
-        'description': 'Dumping entities made easy'
-        'body': """
-\Doctrine\Common\Util\Debug::dump(${1});
-"""
+#Creating Action
     'Creating Action':
         'prefix': 'sfaction'
         'body': """

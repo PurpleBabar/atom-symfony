@@ -1,0 +1,31 @@
+'.source.php':
+    # Get Set
+    'Get Set':
+        'prefix': 'getset'
+        'description': 'Create Getters and Setters for a variable'
+        'body': """
+/**
+* Get ${1}
+* @return ${1}
+*/
+public function get${2}()
+{
+    return $this->${1};
+}
+/**
+* Set ${1}
+* @return $this
+*/
+public function set${2}($${1})
+{
+    $this->${1} = $${1};
+    return $this;
+}
+"""
+# Dump vars
+    'Dumping variables':
+        'prefix': 'sfdump'
+        'description': 'Dumping entities made easy'
+        'body': """
+\Doctrine\Common\Util\Debug::dump(${1});
+"""
