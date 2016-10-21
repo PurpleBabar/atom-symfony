@@ -4,8 +4,8 @@
         'prefix': 'sfbundleconf'
         'description': 'Backbone to create a Bundle configuration class'
         'body': """
-use Symfony\Component\Config\Definition\Builder\TreeBuilder;
-use Symfony\Component\Config\Definition\ConfigurationInterface;
+use Symfony\\\\Component\\\\Config\\\\Definition\\\\Builder\\\\TreeBuilder;
+use Symfony\\\\Component\\\\Config\\\\Definition\\\\ConfigurationInterface;
 
 class Configuration implements ConfigurationInterface
 {
@@ -35,8 +35,8 @@ class Configuration implements ConfigurationInterface
         'prefix': 'sfbundleext'
         'description': 'Backbone to create a Bundle extension class'
         'body': """
-use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\\\\Component\\\\HttpKernel\\\\DependencyInjection\\\\Extension;
+use Symfony\\\\Component\\\\DependencyInjection\\\\ContainerBuilder;
 
 class ${1:BundleName}Extension extends Extension
 {
@@ -50,7 +50,7 @@ class ${1:BundleName}Extension extends Extension
         $loader->load('services.xml');
 
         $this->addClassesToCompile(array(
-            '${2:Bundle\\Type\\ClassYouWantToAdd}',
+            '${2:Bundle\\\\Type\\\\ClassYouWantToAdd}',
             // ...
         ));
     }

@@ -4,8 +4,8 @@
         'prefix': 'sfconstraintvalidator'
         'description': 'Backbone to create a Constraint Validator'
         'body': """
-use Symfony\Component\Validator\Constraint;
-use Symfony\Component\Validator\ConstraintValidator;
+use Symfony\\\\Component\\\\Validator\\\\Constraint;
+use Symfony\\\\Component\\\\Validator\\\\ConstraintValidator;
 
 class ${1:Constraint}Validator extends ConstraintValidator
 {
@@ -25,7 +25,7 @@ class ${1:Constraint}Validator extends ConstraintValidator
         'prefix': 'sfconstraint'
         'description': 'Backbone to create a Constraint Validator'
         'body': """
-use Symfony\Component\Validator\Constraint;
+use Symfony\\\\Component\\\\Validator\\\\Constraint;
 
 class ${1:Name}Constraint extends Constraint
 {

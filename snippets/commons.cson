@@ -27,5 +27,5 @@ public function set${2}($${1})
         'prefix': 'sfdump'
         'description': 'Dumping entities made easy'
         'body': """
-\Doctrine\Common\Util\Debug::dump(${1});
+\\\\Doctrine\\\\Common\\\\Util\\\\Debug::dump(${1});
 """

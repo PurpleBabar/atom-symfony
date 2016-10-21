@@ -13,7 +13,7 @@ public function ${1:index}Action(${2})
         'prefix': 'sfcontroller'
         'description': 'Backbone to create a Controller'
         'body': """
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\\\\Bundle\\\\FrameworkBundle\\\\Controller\\\\Controller;
 
 class ${1:Default}Controller extends Controller
 {

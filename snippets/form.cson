@@ -4,9 +4,9 @@
         'prefix': 'sfdatatransformer'
         'description': 'Backbone to create a DataTransformer'
         'body': """
-use Doctrine\Common\Persistence\ObjectManager;
-use Symfony\Component\Form\DataTransformerInterface;
-use Symfony\Component\Form\Exception\TransformationFailedException;
+use Doctrine\\\\Common\\\\Persistence\\\\ObjectManager;
+use Symfony\\\\Component\\\\Form\\\\DataTransformerInterface;
+use Symfony\\\\Component\\\\Form\\\\Exception\\\\TransformationFailedException;
 
 class ${1:Name}Transformer implements DataTransformerInterface
 {
@@ -34,9 +34,9 @@ class ${1:Name}Transformer implements DataTransformerInterface
         'prefix': 'sfform'
         'description': 'Backbone to create a FormType'
         'body': """
-use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\\\\Component\\\\Form\\\\AbstractType;
+use Symfony\\\\Component\\\\Form\\\\FormBuilderInterface;
+use Symfony\\\\Component\\\\Form\\\\Extension\\\\Core\\\\Type\\\\SubmitType;
 
 class ${1:Entity}Type extends AbstractType
 {
