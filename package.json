@@ -9,7 +9,7 @@
     "autocomplete",
     "php"
   ],
-  "repository": "https://github.com/PurpleBabar/atom-symfony",
+  "repository": "https://github.com/elephantly/atom-symfony",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
