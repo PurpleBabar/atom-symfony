@@ -1,0 +1,22 @@
+'.source.php':
+    # throw exception
+    'Throw Exception':
+        'prefix': 'sfexception'
+        'description': 'Throw an exception'
+        'body': """
+throw $this->createException('${0:Something went wrong}');
+"""
+# throw 404
+    'Throw 404':
+        'prefix': 'sf404'
+        'description': 'Throw a 404 exception'
+        'body': """
+throw $this->createNotFoundException('${0:This page does not exists}');
+"""
+# throw 403
+    'Throw 403':
+        'prefix': 'sf403'
+        'description': 'Throw a 403 exception'
+        'body': """
+throw $this->createAccessDeniedException("${0:You don't have access to this page}");
+"""
