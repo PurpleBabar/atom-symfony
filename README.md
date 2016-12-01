@@ -1,5 +1,9 @@
 # atom-symfony package
 
+[![apm](https://img.shields.io/apm/dm/atom-symfony.svg?style=flat-square)](https://atom.io/packages/atom-symfony)
+[![apm](https://img.shields.io/apm/v/atom-symfony.svg?style=flat-square)](https://atom.io/packages/atom-symfony)
+[![apm](https://img.shields.io/apm/l/atom-symfony.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+
 A set of symfony snippets for atom
 
 Every snippets starts with 'sf', just type in sf and the list of available snippets will appear.
@@ -8,116 +12,116 @@ Every snippets starts with 'sf', just type in sf and the list of available snipp
 
 ### Commons
 
-getset : Create Getters and Setters for a variable
+- *getset* : Create Getters and Setters for a variable
 
 ### Command
 
-- sfcommand : Backbone to create a ContainerAwareCommand
+- *sfcommand* : Backbone to create a ContainerAwareCommand
 
-- sfcommandAddA : Add Argument in configuration
+- *sfcommandAddA* : Add Argument in configuration
 
-- sfcommandAddO : Add Option in configuration
+- *sfcommandAddO* : Add Option in configuration
 
-- sfcommandGetA : Get Argument in execute
+- *sfcommandGetA* : Get Argument in execute
 
-- sfcommandGetO : Get Option in execute
+- *sfcommandGetO* : Get Option in execute
 
-- sfcommandO : Output line in execute
+- *sfcommandO* : Output line in execute
 
 ### Controller
 
-- sfaction : Basic backbone of action
+- *sfaction* : Basic backbone of action
 
-- sfcontroller : Backbone to create a Controller
+- *sfcontroller* : Backbone to create a Controller
 
-- sfem : Getting entity manager
+- *sfem* : Getting entity manager
 
-- sfforward : Forwarding to another action
+- *sfforward* : Forwarding to another action
 
-- sfredirect : Redirecting to another route
+- *sfredirect* : Redirecting to another route
 
-- sfrender : Rendering Template
+- *sfrender* : Rendering Template
 
-- sfrepo : Get Repository
+- *sfrepo* : Get Repository
 
-- sfrequest : Get Request
+- *sfrequest* : Get Request
 
-- sfsession : Get Session
+- *sfsession* : Get Session
 
-- sfflash : Set Flash
+- *sfflash* : Set Flash
 
 ### Dependency injection
 
-- sfbundleconf : Backbone to create a Bundle configuration class
+- *sfbundleconf* : Backbone to create a Bundle configuration class
 
-- sfbundleext : Backbone to create a Bundle extension class
+- *sfbundleext* : Backbone to create a Bundle extension class
 
 ### Doctrine Annotations
 
-These snippets work in xml and php :)
+These snippets work in xml and php :) *yml to come* 
 
-- sfdoctrinefield : Simple field annotation
+- *sfdoctrinefield* : Simple field annotation
 
-- sfdoctrineid : Id field annotation
+- *sfdoctrineid* : Id field annotation
 
-- sfdoctrinemanytoone : ManyToOne mapping
+- *sfdoctrinemanytoone* : ManyToOne mapping
 
-- sfdoctrineonetomany : OneToMany Mapping
+- *sfdoctrineonetomany* : OneToMany Mapping
 
-- sfdoctrineonetoone : OneToOne Mapping
+- *sfdoctrineonetoone* : OneToOne Mapping
 
-- sfdoctrinemanytomanyo : ManyToMany Owner Mapping
+- *sfdoctrinemanytomanyo* : ManyToMany Owner Mapping
 
-- sfdoctrinemanytomanyi : ManyToMany Inverse Mapping
+- *sfdoctrinemanytomanyi* : ManyToMany Inverse Mapping
 
-- sfdoctrineentity : Entity Mapping
+- *sfdoctrineentity* : Entity Mapping
 
 ### Form
 
-- sfdatatransformer : Backbone to create a DataTransformer
+- *sfdatatransformer* : Backbone to create a DataTransformer
 
-- sfform : Backbone to create a FormType
+- *sfform* : Backbone to create a FormType
 
 ### Routing
 
-- sfroute : Backbone to define a route
+- *sfroute* : Backbone to define a route
 
 ### Services
 
 This snippet works in xml and yml :)
 
-- sfservice : Backbone to declare a service
+- *sfservice* : Backbone to declare a service
 
 ### Twig
 
-- sftwigextension : Backbone to create a Twig Extension
+- *sftwigextension* : Backbone to create a Twig Extension
 
-- sftwigaddfilters : Adding filters to a twig extension
+- *sftwigaddfilters* : Adding filters to a twig extension
 
-- sftwigaddfunctions : Adding functions to a twig extension
+- *sftwigaddfunctions* : Adding functions to a twig extension
 
-- sftwigaddtests : Adding tests to a twig extension
+- *sftwigaddtests* : Adding tests to a twig extension
 
-- sftwigaddglobals : Adding globals to a twig extension
+- *sftwigaddglobals* : Adding globals to a twig extension
 
 ### Twig Template     
-- sfform : Render form tag
+- *sfform* : Render form tag
 
-- sfformrow : Render form row tag
+- *sfformrow* : Render form row tag
 
-- trans : Render trans tag
+- *trans* : Render trans tag
 
-- asset : Render asset tag
+- *asset* : Render asset tag
 
-- asseticcss : Render assetic css tag
+- *asseticcss* : Render assetic css tag
 
-- asseticjs : Render assetic js tag
+- *asseticjs* : Render assetic js tag
 
 ### Validators
 
-- sfconstraintvalidator : Backbone to create a Constraint Validator
+- *sfconstraintvalidator* : Backbone to create a Constraint Validator
 
-- sfconstraint : Backbone to create a Constraint Validator
+- *sfconstraint* : Backbone to create a Constraint Validator
 
 
 Enjoy ! :)
