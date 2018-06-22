@@ -20,8 +20,8 @@ class ${1:Constraint}Validator extends ConstraintValidator
 }
 """
 
-    # Constraint Validator
-    'Constraint Validator':
+    # Constraint
+    'Constraint':
         'prefix': 'sfconstraint'
         'description': 'Backbone to create a Constraint Validator'
         'body': """
