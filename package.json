@@ -1,7 +1,7 @@
 {
   "name": "atom-symfony",
   "main": "./lib/atom-symfony",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A collection of Symfony2 snippets",
   "keywords": [
     "snippets",
